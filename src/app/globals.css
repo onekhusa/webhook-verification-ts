@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', system-ui, sans-serif; background: #0f1117; color: #e1e4e8; min-height: 100vh; }
+.header { background: linear-gradient(135deg, #1a1f36, #2d1b69); padding: 24px 32px; border-bottom: 1px solid #2d333b; }
+.header h1 { font-size: 22px; font-weight: 600; color: #fff; }
+.header p { color: #8b949e; font-size: 13px; margin-top: 4px; }
+.container { max-width: 1100px; margin: 0 auto; padding: 24px; display: grid; gap: 20px; }
+.card { background: #161b22; border: 1px solid #2d333b; border-radius: 10px; padding: 20px; }
+.card h2 { font-size: 15px; font-weight: 600; margin-bottom: 14px; color: #c9d1d9; display: flex; align-items: center; gap: 8px; }
+.card h2 .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+.dot.green { background: #3fb950; }
+.dot.orange { background: #d29922; }
+.dot.purple { background: #bc8cff; }
+.grid-2 { display: grid; grid-template-columns: 1fr; gap: 20px; }
+.form-group { margin-bottom: 12px; }
+.form-group label { display: block; font-size: 12px; color: #8b949e; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+.form-group input { width: 100%; padding: 8px 12px; background: #0d1117; border: 1px solid #30363d; border-radius: 6px; color: #e1e4e8; font-size: 13px; font-family: 'Cascadia Code', 'Fira Code', monospace; }
+.form-group input:focus { outline: none; border-color: #58a6ff; }
+button { padding: 8px 16px; border: none; border-radius: 6px; font-size: 13px; font-weight: 500; cursor: pointer; transition: all 0.15s; }
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+.btn-primary { background: #238636; color: #fff; }
+.btn-primary:hover:not(:disabled) { background: #2ea043; }
+.btn-secondary { background: #21262d; color: #c9d1d9; border: 1px solid #30363d; }
+.btn-secondary:hover:not(:disabled) { background: #30363d; }
+.btn-group { display: flex; gap: 8px; margin-top: 8px; }
+.result-box { background: #0d1117; border: 1px solid #30363d; border-radius: 6px; padding: 14px; margin-top: 12px; font-family: 'Cascadia Code', 'Fira Code', monospace; font-size: 12px; white-space: pre-wrap; word-break: break-all; max-height: 300px; overflow-y: auto; line-height: 1.6; }
+.result-box.success { border-color: #238636; color: #3fb950; }
+.result-box.error { border-color: #da3633; color: #f85149; }
+.status-badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: 500; }
+.status-badge.success { background: #238636; color: #fff; }
+.status-badge.pending { background: #9e6a03; color: #fff; }
+.status-badge.error { background: #da3633; color: #fff; }
+.status-badge.verified { background: #238636; color: #fff; }
+.status-badge.rejected { background: #da3633; color: #fff; }
+.status-badge.skipped { background: #6e7681; color: #fff; }
+.verify-banner { padding: 10px 14px; border-radius: 6px; margin-bottom: 8px; font-size: 12px; font-weight: 600; display: flex; align-items: center; gap: 8px; }
+.verify-banner.verified { background: #0d2818; border: 1px solid #238636; color: #3fb950; }
+.verify-banner.rejected { background: #2d0f0f; border: 1px solid #da3633; color: #f85149; }
+.verify-banner.skipped { background: #1c1c1c; border: 1px solid #6e7681; color: #8b949e; }
+.verify-icon { font-size: 16px; }
+.verify-detail { font-weight: 400; color: #8b949e; margin-left: 4px; }
+.sig-row { display: flex; gap: 6px; align-items: flex-start; margin-top: 6px; font-size: 11px; font-family: monospace; }
+.sig-label { color: #8b949e; white-space: nowrap; min-width: 90px; }
+.sig-value { color: #c9d1d9; word-break: break-all; }
+.webhook-list { max-height: 400px; overflow-y: auto; }
+.webhook-item { background: #0d1117; border: 1px solid #30363d; border-radius: 6px; padding: 12px; margin-bottom: 8px; font-size: 12px; }
+.webhook-item .meta { color: #8b949e; margin-bottom: 6px; display: flex; gap: 12px; flex-wrap: wrap; }
+.webhook-item pre { margin: 0; color: #c9d1d9; white-space: pre-wrap; word-break: break-all; font-family: 'Cascadia Code', 'Fira Code', monospace; font-size: 11px; }
+.copy-btn { padding: 2px 8px; font-size: 11px; background: #21262d; border: 1px solid #30363d; color: #8b949e; border-radius: 4px; cursor: pointer; }
+.copy-btn:hover { background: #30363d; color: #e1e4e8; }
+.hidden { display: none; }
+@media (min-width: 768px) {
+  .grid-2 { grid-template-columns: 1fr 1fr; }
+}
